@@ -1,0 +1,481 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ESPECIALISTAS EN CAPACITACION PARA TRABAJO EN ALTURAS LOS ANDES{% block titulo %}
+
+{% endblock %}</title>
+		<meta charset="utf-8" />
+
+				<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+			<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+			<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+			<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">					
+			<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+			<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+	</head>
+	<body>
+
+
+
+
+			  <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="#home">Inicio</a></li>
+				          <li><a href="#cursos">Cursos</a></li>
+				          <li><a href="#quien">¿Quiénes somos?</a></li>
+				          <li><a href="#norma">Normatividad colombiana para TSA -Trabajo seguro en alturas</a></li>
+				          <li><a href="#contacto">Contacto</a></li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-start">
+						<div class="banner-content col-lg-8 col-md-12">
+							<h4 class="text-white text-uppercase"></h4>
+							<h1>
+								Especialistas en capacitación para trabajo en alturas Los Andes					
+							</h1>
+
+						<a href="{% static 'pdfs/REScarlos.pdf' %}" class="primary-btn header-btn text-uppercase">Autorización SENA Res. 000243/2017</a>
+						</div>												
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<!-- Start top-dish Area -->
+			<section class="top-dish-area section-gap" id="cursos">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Consulte los cursos realizados aquí.</h1>
+								<p>						
+									
+								    <form  method="POST" 	action="/safety/certificados/">
+									{% csrf_token %}
+										<div class="field">
+											<label for="name">Cédula</label>
+											<input type="text" name="cedula" id="cedula" />
+										</div>
+										
+										<ul class="actions">
+											<li><button type="submit">Consulta</button></li>
+										</ul>
+									</form>
+						            {% block content %}
+            						{% endblock %}
+
+
+							</p></p>
+							</div>
+						</div>
+
+					</div>						
+					<div class="row">
+						<div class="single-dish col-lg-4">
+							<div class="thumb">
+								<img class="img-fluid"  src="{% static 'img/minicargador.jpg' %}" alt="">
+							</div>
+							<h4 class="text-uppercase pt-20 pb-20">Operario de minicargador</h4>
+							<p>
+				
+				
+							</p>
+						</div>
+						<div class="single-dish col-lg-4">
+							<div class="thumb">
+								<img class="img-fluid"  src="{% static 'img/retroexcavadora.jpg' %}" alt="">
+							</div>
+							<h4 class="text-uppercase pt-20 pb-20">Operario de retroexcavadora</h4>
+							<p>
+		
+							</p>
+						</div>
+						<div class="single-dish col-lg-4">
+							<div class="thumb">
+								<img class="img-fluid"  src="{% static 'img/vibrocompactador.jpg' %}" alt="">
+							</div>
+							<h4 class="text-uppercase pt-20 pb-20">Operario de vibrocompactador</h4>
+							<p>
+
+							</p>
+						</div>			
+
+						<div class="single-dish col-lg-4">
+							<div class="thumb">
+								<img class="img-fluid"  src="{% static 'img/grua.jpg' %}" alt="">
+							</div>
+							<h4 class="text-uppercase pt-20 pb-20">Operario de grúa</h4>
+							<p>
+
+							</p>
+						</div>	
+						<div class="single-dish col-lg-4">
+							<div class="thumb">
+								<img class="img-fluid"  src="{% static 'img/izaje.jpg' %}" alt="">
+							</div>
+							<h4 class="text-uppercase pt-20 pb-20">Operario de izaje</h4>
+							<p>
+
+							</p>
+						</div>																
+					</div>
+											El curso de OPERADOR DE MAQUINARIA PESADA 2018 tiene como objetivo desarrollar en el participante destreza en la operación de Excavadora Hidráulica de cualquier marca y modelo, que permita un logro de resultados calificados. La especial dedicación y cantidad de horas y metodologías de prácticas con los equipos, harán alcanzar un buen nivel de maniobra y operatividad con la Maquinaria Pesada, familiarizando al aprendiz con todas las funciones del equipo.
+											<br>	</div><br>
+											<h3>TRABAJO EN ALTURAS NIVEL AVANZADO</h3><br>
+											<h4>40 HORAS (16 TEORIA - 24 PRACTICA):</h4><br>
+											<table class="alt">
+											<thead>
+												<tr>
+													<th>ACTIVIDADES Enseñanza, Aprendizaje y Evaluación</th>
+													<th>CRITERIOS DE EVALUACIÓN</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1.- Interpretar la norma técnica en identificación de peligros y riesgos</td>
+													<td>Identifica riesgos presentes en el ambiente laboral . Valora y prioriza riesgos. . Interpreta la normatividad vigente para el trabajo en altura . Reporta los riesgos identificados en el lugar de trabajo</td>
+													
+												</tr>
+												<tr>
+													<td>2.- Aplicar los procedimientos establecidos por la empresa de acuerdo con la normatividad y Legislación</td>
+													<td>Aplica los procedimientos establecidos para el desarrollo de su trabajo, ya sea en espacios confinados, postes, fachadas, andamios, torres, escaleras y estructuras entre otras. . Reporta los incidentes y ATEP en el FURAT.</td>
+													
+												</tr>
+												<tr>
+													<td>3.- Implementar el programa de protección contra caídas.</td>
+													<td>Diligencia el permiso para trabajo en alturas. . Selecciona elementos y equipos a utilizar en la protección pasiva-activa . Inspecciona los EPP. . Informa condiciones subestandar respecto al equipo y EPP conforme a los procedimientos. . Aplica medidas de protección en espacios confinados, postes, fachadas, andamios, torres, escaleras y estructuras entre otras.</td>
+													
+												</tr>
+												<tr>
+													<td>4.- Realizar la señalización y demarcación de las áreas de trabajo.</td>
+													<td>Señaliza y demarca el área de trabajo . Interpreta el código de colores</td>
+													
+												</tr>
+												<tr>
+													<td>5.- Aplicar los procedimientos de rescate.</td>
+													<td>Aplica las normas de seguridad y mantenimiento para equipos utilizados en el rescate básico. . Realiza los nudos más usados en rescate básico . Emplea el anclaje requerido . Aplica técnicas de ascenso y descenso en Rescate Vertical . Emplea sistema de poleas en descenso . Valora lesionados de acuerdo con principios generales de primeros auxilios</td>
+													
+												</tr>
+											</tbody>
+
+										</table>
+				</div>	
+			</section>
+			<!-- End top-dish Area -->
+			
+			<!-- Start video Area -->
+			<section class="video-area">
+				<div class="container">
+					<div class="row justify-content-center align-items-center flex-column">
+						<a class="play-btn" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+							<img src="img/play-btn.png" alt="">
+						</a>
+						<h3 class="pt-20 pb-20 text-white">                                                                        Niveles de entrenamiento
+                                                                        
+                                                                        <p><ol>
+                                                                                <li>Básico Operativo: 8 horas</li>
+                                                                                 <li>Jefes de Área: 8 horas</li>
+                                                                                  <li>Avanzado: 40 horas</li>
+                                                                                <li>Reentrenamiento: 20 horas</li>
+                                                                                <li>Coordinador: 80 horas</li>
+                                                                        </ol></p>
+					</div>
+				</div>	
+			</section>
+			<!-- End video Area -->
+			
+
+			<!-- Start features Area -->
+			
+			<!-- End features Area -->
+
+
+			<!-- Start related Area -->
+			<!-- 	<section class="related-area section-gap">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Our Featured Food Menus</h1>
+								<p>Who are in extremely love with eco friendly system.</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row justify-content-center">
+						<div class="active-realated-carusel">
+							<div class="item row align-items-center">
+								<div class="col-lg-6 rel-left">
+								   <h3>
+								   		Fresh & Crispy All the time
+								   </h3>
+								   <p class="pt-30 pb-30">
+								 	  	Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								   </p>
+									<a href="#" class="primary-btn header-btn text-uppercase">view full menu</a>								   
+								</div>
+								<div class="col-lg-6">
+									<img class="img-fluid" src="{% static 'img/slider1.jpg' %}" alt="">
+								</div>
+							</div>
+							<div class="item row align-items-center">
+								<div class="col-lg-6 rel-left">
+								   <h3>
+								   		Fresh & Crispy All the time
+								   </h3>
+								   <p class="pt-30 pb-30">
+								 	  	Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								   </p>
+									<a href="#" class="primary-btn header-btn text-uppercase">view full menu</a>								   
+								</div>
+								<div class="col-lg-6">
+									<img class="img-fluid" src="{% static 'img/slider1.jpg' %}" alt="">
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>	
+			</section>
+		
+			-->
+
+
+			<!-- Start team Area -->
+			<section class="team-area section-gap" id="quien">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">¿Quiénes somos?</h1>
+								<p>Somos una empresa calificada y avalada la cual Garantiza el desarrollo de competencias, habilidades y actitudes en el personal capacitado, entrenado y evaluado, para que pueda ser certificado mediante el aval del Servicio Nacional de Aprendizaje (SENA), según lo estableció en la Resolución 000146/2012 del SENA y normas internacionales, y buscar minimizar las probabilidades de incidentes y accidentes a los trabajadores, durante labores que impliquen alturas.</p>
+							</div>
+						</div>
+					</div>						
+					
+				</div>	
+			</section>
+			<!-- End team Area -->			
+<section class="features-area pt-100" id="norma">
+	<h1 class="mb-10"><p>Normatividad colombiana para trabajo seguro en altura </p></h1>
+				<div class="container">
+					<div class="feature-section">
+						<div class="row">
+							<div class="single-feature col-lg-3 col-md-6">
+								<a href="{%static 'pdfs/resolución 1409_2012.pdf' %}"><img src="{%static 'images/botonpdf.png' %}" alt="">
+								<h4 class="pt-20 pb-20">resolución 1409 de 2012</h4></a>
+
+
+
+
+
+							</div>
+							<div class="single-feature col-lg-3 col-md-6">
+								<a href="{%static 'pdfs/resolución 1903_2013.pdf' %}">
+								<img src="{%static 'images/botonpdf.png' %}" alt="">
+								<h4 class="pt-20 pb-20">Resolución 1903 de 2013</h4></a>
+							</div>
+
+
+							<div class="single-feature col-lg-3 col-md-6">
+								<a href="{%static 'pdfs/resolucion_2578_de_2012.pdf' %}">
+								<img src="{%static 'images/botonpdf.png' %}" alt="">
+								<h4 class="pt-20 pb-20">resolución 2578 de 2012 SENA</h4></a>
+							</div>
+
+
+
+							<div class="single-feature col-lg-3 col-md-6">
+								<a href="{%static 'pdfs/resolución 3673_2008.pdf' %}">
+								<img src="{%static 'images/botonpdf.png' %}" alt="">
+								<h4 class="pt-20 pb-20">Resolución 3673 de 2008</h4></a>
+							</div>
+
+													
+						</div>											
+					</div>
+				</div>	
+			</section>
+			<!-- start blog Area -->		
+			<section class="blog-area section-gap" id="feature">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+						
+						</div>
+					</div>		
+					<!-- start blog Area			
+					<div class="row">
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="img-fluid" src="{% static 'img/b1.jpg' %}"  alt="">
+							</div>
+							<p class="date">10 Jan 2018</p>
+							<a href="#"><h4>Cooking Perfect Fried Rice
+							in minutes</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>									
+						</div>
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="img-fluid" src="{% static 'img/b2.jpg' %}"  alt="">
+							</div>
+							<p class="date">10 Jan 2018</p>
+							<a href="#"><h4>Secret of making Heart 
+							Shaped eggs</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>									
+						</div>
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="img-fluid" src="{% static 'img/b3.jpg' %}"  alt="">
+							</div>
+							<p class="date">10 Jan 2018</p>
+							<a href="#"><h4>How to check steak if 
+							it is tender or not</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>									
+						</div>
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="img-fluid" src="{% static 'img/b4.jpg' %}"  alt="">
+							</div>
+							<p class="date">10 Jan 2018</p>
+							<a href="#"><h4>Addiction When Gambling
+							Becomes A Problem</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>									
+						</div>						
+					</div>
+				</div>	
+			</section>
+			
+			 -->
+
+			<!-- Start Contact Area -->
+			<section class="contact-area" id="contacto">
+				
+			</section>
+			<!-- End Contact Area -->				
+
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">Nosotros</h4>
+								<p>
+									
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">Contáctanos</h4>
+								<p>
+									CALLE 11 CON CARRERA 4  LA VEGA, CUNDINAMARCA
+								</p>
+								<p class="number">
+									311-000-0000 <br>
+									
+								</p>
+							</div>
+						</div>						
+						<div class="col-lg-5  col-md-6 col-sm-6">
+
+						</div>						
+					</div>
+					<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->
+
+			<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{% static 'js/vendor/bootstrap.min.js' %}" ></script>			
+			<script type="{% static 'text/javascript' %}" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{% static 'js/easing.min.js' %}"></script>			
+			<script src="{% static 'js/hoverIntent.js' %}"></script>
+			<script src="{% static 'js/superfish.min.js' %}"></script>	
+			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>	
+			<script src="{% static 'js/owl.carousel.min.js' %}"></script>			
+			<script src="{% static 'js/jquery.sticky.js' %}"></script>
+			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>			
+			<script src="{% static 'js/parallax.min.js' %}"></script>	
+			<script src="{% static 'js/mail-script.js' %}"></script>	
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

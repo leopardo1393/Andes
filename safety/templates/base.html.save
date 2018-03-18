@@ -1,0 +1,200 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SAFETY CONSULTING S.A.S{% block titulo %}
+
+{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet"  type="text/css" href="{% static 'assets/css/main.css' %}"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="shortcut icon" href="{%static 'favicon.ico' %}">
+		<link rel="icon" type="image/gif" href="{%static 'animated_favicon1.gif' %}">
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Bienvenidos</a></li>
+							<li><a href="#one">Quiénes somos</a></li>
+							<li><a href="#two">Cursos</a></li>
+							<li><a href="/admin/">Iniciar sesión</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1><img src="{% static 'images/logo.png' %}" alt="" data-position="center center" />SAFETI CONSULTING S.A.S</h1>
+							<p>Consulte sus cursos aquí.</p>
+								    <form  method="POST" 	action="/safety/certificados/">
+									{% csrf_token %}
+										<div class="field">
+											<label for="name">Cédula</label>
+											<input type="text" name="cedula" id="cedula" />
+										</div>
+										
+										<ul class="actions">
+											<li><button type="submit">Consulta</button></li>
+										</ul>
+									</form>
+						            {% block content %}
+            						{% endblock %}
+						<a href="{% static 'pdfs/resolucion.pdf' %}">Autorización SENA Res. 000146/2012</a>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+                                                <section>
+                                                        <a href="#" class="image fit"><img src="{%static 'images/Alturas.jpg' %}" alt="" data-position="center center" /></a>
+                                                        <div class="content">
+                                                                <div class="inner">
+                                                                        <h2>Quiénes somos</h2>
+                                                                        <p>Somos una empresa calificada y avalada la cual Garantiza el desarrollo de competencias, habilidades y actitudes en el personal capacitado, entrenado y evaluado, $
+
+                                                                </div>
+                                                        </div>
+                                                </section>
+						<section>
+							<a href="#" class="image fit"><img src="" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Niveles de entrenamiento</h2>
+									<p><ol>
+										<li>Básico Operativo: 8 horas</li>
+ 										 <li>Jefes de Área: 8 horas</li>
+										  <li>Avanzado: 40 horas</li>
+										<li>Reentrenamiento: 20 horas</li>
+										<li>Coordinador: 80 horas</li>
+									</ol></p>
+
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image fit"><img src="{%static 'images/talturas.jpg' %}" alt="" data-position="top center" /></a>
+							<div class="content"								<div class="inner">
+									<h2>Información de contacto</h2>
+									<p>Para mayor información visítanos en la Calle 35 No 9-35, barrio Paredes (Chia-Cundinamarca) o comunícate a nuestros números de contacto 3167468147 y 3167490489. También puedes contactarnos al correo safetyconsulting.edu@hotmail.com. 
+									</p>
+
+								</div>
+							</div>
+						</section>
+
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+					<section>	
+									<h2>Cursos</h2>
+									<h3>TRABAJO EN ALTURAS NIVEL AVANZADO</h3>
+									<h4>40 HORAS (16 TEORIA - 24 PRACTICA):</h4>
+									<div class="wrapper style1 fade-up">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>ACTIVIDADES Enseñanza, Aprendizaje y Evaluación</th>
+													<th>CRITERIOS DE EVALUACIÓN</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1.- Interpretar la norma técnica en identificación de peligros y riesgos</td>
+													<td>Identifica riesgos presentes en el ambiente laboral . Valora y prioriza riesgos. . Interpreta la normatividad vigente para el trabajo en altura . Reporta los riesgos identificados en el lugar de trabajo</td>
+													
+												</tr>
+												<tr>
+													<td>2.- Aplicar los procedimientos establecidos por la empresa de acuerdo con la normatividad y Legislación</td>
+													<td>Aplica los procedimientos establecidos para el desarrollo de su trabajo, ya sea en espacios confinados, postes, fachadas, andamios, torres, escaleras y estructuras entre otras. . Reporta los incidentes y ATEP en el FURAT.</td>
+													
+												</tr>
+												<tr>
+													<td>3.- Implementar el programa de protección contra caídas.</td>
+													<td>Diligencia el permiso para trabajo en alturas. . Selecciona elementos y equipos a utilizar en la protección pasiva-activa . Inspecciona los EPP. . Informa condiciones subestandar respecto al equipo y EPP conforme a los procedimientos. . Aplica medidas de protección en espacios confinados, postes, fachadas, andamios, torres, escaleras y estructuras entre otras.</td>
+													
+												</tr>
+												<tr>
+													<td>4.- Realizar la señalización y demarcación de las áreas de trabajo.</td>
+													<td>Señaliza y demarca el área de trabajo . Interpreta el código de colores</td>
+													
+												</tr>
+												<tr>
+													<td>5.- Aplicar los procedimientos de rescate.</td>
+													<td>Aplica las normas de seguridad y mantenimiento para equipos utilizados en el rescate básico. . Realiza los nudos más usados en rescate básico . Emplea el anclaje requerido . Aplica técnicas de ascenso y descenso en Rescate Vertical . Emplea sistema de poleas en descenso . Valora lesionados de acuerdo con principios generales de primeros auxilios</td>
+													
+												</tr>
+											</tbody>
+
+										</table>
+
+						</div>
+						</section>
+					</section>
+
+				<!-- Three 
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Ingrese la información</h2>
+								<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="field">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field">
+											<label for="email">Clave</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Enviar</a></li>
+										</ul>
+									</form>
+								</section>
+								
+							</div>
+						</div>
+					</section>
+            </div>
+-->
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li><a> Calle 35 No 9-35,barrio Paredes (Chia-Cundinamarca).</li><li><a>safetyconsulting.edu@hotmail.com</a></li>
+						<li><a>3167468147 y 3167490489</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script  type="text/javascript" src="{%static 'assets/js/jquery.min.js' %}"></script>
+			<script  type="text/javascript" src="{%static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script type="text/javascript" src="{%static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script type="text/javascript" src="{%static 'assets/js/skel.min.js' %}"></script>
+			<script type="text/javascript" src="{%static 'assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script type="text/javascript" src="{%static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

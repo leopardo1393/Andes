@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block titulo %}
+Certificados
+{% endblock %}
+
+
+{% block content %}
+									<h2>CURSOS REALIZADOS</h2>
+
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>CÉDULA</th>
+													<th>NOMBRES</th>
+													<th>APELLIDOS</th>
+													<th>CÓDIGO</th>
+													<th>APROBÓ</th>
+													<th>FECHA</th>
+													<th>HORAS</th>
+												</tr>
+											</thead>
+											<tbody>
+											{%for items in lista%}
+												<tr>
+													<td>{{items.cedula}}</td>
+													<td>{{items.nombre}}</td>
+													<td>{{items.apellido}}</td>
+													<td>{{items.codigo}}</td>
+													<td>{{items.aprobo}}</td>
+													<td>{{items.fecha|date:"D, M, Y"}}</td>
+													<td>{{items.horas}}</td>
+
+												</tr>
+											{% endfor %}
+											</tbody>
+
+										</table>	
+
+
+
+
+			
+{% endblock %}

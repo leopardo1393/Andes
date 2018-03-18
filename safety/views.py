@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from django.http import HttpResponse
+from django.shortcuts import render
+from models import certificaciones
+# Create your views here.
+def index(request):
+	return render(request, 'index.html', {})
+
+
+def certificados(request):
+	lista =[]
+	if request.method == "POST":
+		cedula= request.POST.get("cedula", "")
+		certif= certificaciones.objects.filter(cedula=cedula)
+		lista=[]
+		Certificado={}
+		for i in certif:
+			print(i.nombres)
+			Certificado ={'cedula':cedula, 'nombre':i.nombres, 'apellido':i.apellido, 'codigo':i.codigo, 'aprobo':i.aprobo, 'fecha':i.fecha,'horas':i.horas}
+			lista.append(Certificado)
+			Certificado={}
+
+
+		
+	return render(request, 'certificados.html', {"lista":lista})

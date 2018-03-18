@@ -1,0 +1,31 @@
+@font-face{
+	font-family : personalizado;
+	src:url(BERNHC.TTF);
+}
+h1.primeraclase{
+	font-family: personalizado;
+
+}
+h6.segundaclase{
+	font-family: personalizado;
+	float:left;
+	
+}
+
+
+
+#posicion {
+  border: 1px solid #CCC;
+  background-color: #E0E0E0;
+  padding: .5em;
+}
+ 
+.derecha   { float: right; }
+.izquierda { float: left;  }
+
+section.fondo {
+    background-image: url("../../images/trabajo.jpg");
+    background-repeat: repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
